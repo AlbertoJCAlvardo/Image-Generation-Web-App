@@ -22,7 +22,7 @@ es preciso crear un entorno virtual para el proyecto
 
 ## Instalación
 
-Utiliza el gestor de paquetes [pip] (https://pip.pypa.io/en/stable/) 
+Utiliza el gestor de paquetes [pip](https://pip.pypa.io/en/stable/) 
 para instalar las librerias utilizadas
 ```
     pip install -r requirements.txt
