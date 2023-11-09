@@ -1,17 +1,30 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Resultado</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-</head>
-<body>
-    <h1>Resultado</h1>
-    <p>Imagen generada:</p>
-    <img src="{{url_for('static', filename='imagenes/result.jpg') }}"/>
-    <a href="/">Volver al inicio</a>
-</body>
+    <head>
+        <title>Resultado</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles/main_style.css')}}">
+    </head>
+    <body>
+        <div class="header">
+            Resultado
+        </div>
+        <center>
+            <div class="anim-button">
+                <a href="/">
+                    Volver al inicio
+                    <span></span>
+                </a>
+            </div>
+        </center>
+        <div class="image-box">
+            
+            <img src="{{url_for('static', filename='imagenes/result.jpg') }}"/>
+            
+        </div>
+        
+            
+      
+    </body>
 </html>
 
