@@ -2,6 +2,8 @@ from flask import Flask, render_template, request, redirect
 from openai import OpenAI
 import base64
 from utils.config import settings
+from PIL import Image
+from io import BytesIO
 
 app = Flask(__name__)
 
@@ -27,13 +29,12 @@ def generar_imagen():
     )
 
     b64_string = response.data[0].b64_json
-    decoded = base64.b64decode(b64_string)
-    
-    fpath = 'static/imagenes/result.jpg'
-    f = open(fpath,'wb')
 
-    f.write(decoded)
-    f.close()
+    decoded = base64.b64decode(b64_string)
+
+    image = Image.open(BytesIO(decoded)).convert("RGB")    
+    fpath = 'static/imagenes/result.jpg'
+    image.save(fpath, "jpeg")
  
     return render_template('resultado.html' )
 
