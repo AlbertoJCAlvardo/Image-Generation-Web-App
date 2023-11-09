@@ -1,8 +1,8 @@
-# Aplicacion Para Generación de Imagenes
+#Aplicacion Para Generación de Imagenes
 Un ejemplo de como realizar una aplicación web
 sencilla utilizando python flask y openai api
 
-## Creación de un entorno virtual
+##Creación de un entorno virtual
 Para el correcto uso y segmentación de las librerías 
 es preciso crear un entorno virtual para el proyecto
 ### Windows
@@ -12,7 +12,7 @@ es preciso crear un entorno virtual para el proyecto
   .\venv\Scripts\activate
 ```
 
-### Linux / macOS
+###Linux / macOS
 ```
    pip install virtualenv
    python3 -m venv env
@@ -20,7 +20,7 @@ es preciso crear un entorno virtual para el proyecto
 ```
 
 
-## Instalación
+##Instalación
 
 Utiliza el gestor de paquetes [pip] (https://pip.pypa.io/en/stable/) 
 para instalar las librerias utilizadas
@@ -28,7 +28,7 @@ para instalar las librerias utilizadas
     pip install -r requirements.txt
 ```
 
-## Uso
+##Uso
 Para encender la aplicación:
 ```
   python image.py
