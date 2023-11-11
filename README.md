@@ -31,11 +31,13 @@ para instalar las librerias utilizadas
 ##Definicion de variables de entorno
 
 ### Linux/macOS:
-export FLASK_APP="run.py"
-
+```
+export FLASK_APP="image.py"
+```
 ### Windows: 
-set "FLASK_APP=run.py"
-
+```
+set "FLASK_APP=image.py"
+```
 
 ## Uso
 Para encender la aplicación:
@@ -43,7 +45,13 @@ Para encender la aplicación:
   flask run
 ```
 
-Para utilizar la aplicacion solo es necesario escrbir en el navegador
+## Para utilizar la aplicacion solo es necesario escrbir en el navegador
+### Windows
+```
+  127.0.0.1:5000
+```
+
+### Linux
 ```
   127.0.0.0:5000
 ```
