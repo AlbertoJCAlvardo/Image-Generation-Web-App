@@ -9,7 +9,7 @@ es preciso crear un entorno virtual para el proyecto
 ```
   py -m pip install --user virtualenv
   py -m venv env
-  .\venv\Scripts\activate
+  env\Scripts\activate.bat
 ```
 
 ### Linux / macOS
@@ -28,10 +28,19 @@ para instalar las librerias utilizadas
     pip install -r requirements.txt
 ```
 
+##Definicion de variables de entorno
+
+### Linux/macOS:
+export FLASK_APP="run.py"
+
+### Windows: 
+set "FLASK_APP=run.py"
+
+
 ## Uso
 Para encender la aplicación:
 ```
-  python image.py
+  flask run
 ```
 
 Para utilizar la aplicacion solo es necesario escrbir en el navegador
