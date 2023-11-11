@@ -18,25 +18,31 @@ def index():
 def generar_imagen():
 
     prompt = request.form['prompt']
+    ancho = int(request.form['ancho'])
+    alto = int(request.form['alto'])
 
-    response = client.images.generate(
-    model="dall-e-3",
-    prompt= prompt,
-    size="1024x1024",
-    quality="standard",
-    n=1,
-    response_format = 'b64_json'
-    )
+    if ancho>0 and alto>0:
 
-    b64_string = response.data[0].b64_json
+        response = client.images.generate(
+        model="dall-e-3",
+        prompt= prompt,
+        size="1024x1024",
+        quality="standard",
+        n=1,
+        response_format = 'b64_json'
+        )
 
-    decoded = base64.b64decode(b64_string)
+        b64_string = response.data[0].b64_json
 
-    image = Image.open(BytesIO(decoded)).convert("RGB")    
-    fpath = 'static/imagenes/result.jpg'
-    image.save(fpath, "jpeg")
- 
-    return render_template('resultado.html' )
+        decoded = base64.b64decode(b64_string)
+
+        image = Image.open(BytesIO(decoded)).convert("RGB")    
+        fpath = 'static/imagenes/result.jpg'
+        image.save(fpath, "jpeg")
+    
+        return render_template('resultado.html' )
+    else:
+        return "<h1>Error de dimensiones de la imagen</h1>"
 
 if __name__ == '__main__':
     app.run(debug=True)
